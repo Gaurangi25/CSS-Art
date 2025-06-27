@@ -1,0 +1,11 @@
+ Elliptical border-radius
+This lets you specify horizontal and vertical radii separately, making the corners oval/egg-shaped instead of perfectly round.
+
+Syntax:
+css
+Copy code
+border-radius: H1 H2 H3 H4 / V1 V2 V3 V4;
+H1 H2 H3 H4 = horizontal radii (left to right, top to bottom)
+
+V1 V2 V3 V4 = vertical radii (same order)
+
