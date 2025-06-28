@@ -1,0 +1,64 @@
+General rule:
+X% = how far from the left
+
+Y% = how far from the top
+
+So 0% 0% is top-left corner, 100% 100% is bottom-right, 50% 50% is center.
+
+
+🔹 Basic Syntax:
+css
+Copy code
+clip-path: polygon(x1 y1, x2 y2, x3 y3, ...);
+Each point (x y) is a coordinate defining one corner of the shape. You can use:
+
+percentages (%) — relative to the element’s dimensions
+
+absolute units (px, em, etc.) — rarely used, less responsive
+
+🔹 Example – Triangle:
+css
+Copy code
+clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+This defines a triangle with these corners:
+
+Top center → 50% 0%
+
+Bottom right → 100% 100%
+
+Bottom left → 0% 100%
+
+🔹 Example – Star (more points):
+css
+Copy code
+clip-path: polygon(
+  50% 0%,
+  61% 35%,
+  98% 35%,
+  68% 57%,
+  79% 91%,
+  50% 70%,
+  21% 91%,
+  32% 57%,
+  2% 35%,
+  39% 35%
+);
+Creates a star-like shape with 10 points.
+
+🔹 Other Shape Functions:
+css
+Copy code
+clip-path: circle(50% at 50% 50%);
+clip-path: ellipse(50% 30% at 50% 50%);
+clip-path: inset(10% 20% 30% 40%);
+clip-path: path("M10,10 L100,10 L100,100 Z"); /* SVG path */
+
+
+ 🎯 SIMPLE SHAPE RECIPES:
+Shape	CSS	What It Does
+Circle	border-radius: 50%;	Perfect circle (use equal width & height)
+Oval	border-radius: 50% / 30%;	Stretched horizontally
+Pill	border-radius: 100px / 50px;	Capsule shape
+Top dome	border-radius: 50% 50% 0 0 / 60% 60% 0 0;	Rounded top, flat bottom
+Bottom dome	border-radius: 0 0 50% 50% / 0 0 60% 60%;	Flat top, rounded bottom
+Diagonal Blob	border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;	Irregular blob

@@ -1,0 +1,56 @@
+* {
+  background-color: azure;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.outer-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+
+  transform: scale(1.4);
+}
+
+.frosting {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(94, 204, 207);
+
+  border-radius: 50%;
+  position: relative;
+  top: 60px;
+  z-index: 1;
+}
+
+.disc {
+  height: 40px;
+  width: 100px;
+  background-color: rgb(94, 204, 207);
+
+  border-radius: 24% 24% 50% 50% / 50% 50% 50% 50%;
+
+  position: relative;
+  top: 20px;
+  z-index: 2;
+}
+
+.cone {
+  height: 130px;
+  width: 90px;
+  background-color: #a7622d;
+
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+
+  position: relative;
+  z-index: 0;
+  
+}
